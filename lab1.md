@@ -19,7 +19,9 @@ Step 3: Now that we have our account, we can remotely connect! If you are on Win
 ![Image](Terminal.png)
 
 Step 4: On your terminal, type the command below, where the "cs15lsp23zz" is replaced by your unique course-specific username from Step 1 and 2. 
+
 **$ ssh cs15lsp23zz@ieng6.ucsd.edu**
+
 The dollar sign should not be typed in!
 
 Step 5: When it asks if you are sure you want to be connecting, type "yes" and it will ask for your password. Type in your password from Step 2 (note that the terminal will not show that you are typing anything) and you will be logged in! You are now remotely connected to a computer in the CSE Basement!
