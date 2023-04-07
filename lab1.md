@@ -28,7 +28,7 @@ The dollar sign should not be typed in!
 
 ## Part 3 - Running Commands
 
-Now that we're logged in, let's run some commands! Here are some easy commands you can try: **cd~**, **cd**, **ls -lat**, or **ls -a** You can just type them in to the terminal and hit enter to run them! Below, I've tried the "ls", "ls -lat", and "ls -a" commands.
+Now that we're logged in, let's run some commands! Here are some easy commands you can try: **cd~**, **cd**, **ls -lat**, or **ls -a**. You can just type them in to the terminal and hit enter to run them! Below, I've tried the "ls", "ls -lat", and "ls -a" commands.
 
 ![Image](Commands.png)
 
