@@ -16,6 +16,8 @@ Step 2: Click the button with your cs15l username, then click the link to change
 
 Step 3: Now that we have our account, we can remotely connect! If you are on Windows, you must first download Git first. Open VSCode and open the terminal (ctrl or command + ~ or by using Terminal -> New Terminal). Your terminal should look like something below:
 
+![Image](Terminal.png)
+
 Step 4: On your terminal, type the command below, where the "cs15lsp23zz" is replaced by your unique course-specific username from Step 1 and 2. 
 **$ ssh cs15lsp23zz@ieng6.ucsd.edu**
 The dollar sign should not be typed in!
@@ -26,6 +28,7 @@ Step 5: When it asks if you are sure you want to be connecting, type "yes" and i
 
 Step 6: Now that we're logged in, let's run some commands! Here are some easy commands you can try: **cd~**, **cd**, **ls -lat**, or **ls -a** You can just type them in to the terminal and hit enter to run them! Below, I've tried the "ls -lat" and "ls -a" commands.
 
+![Image](Commands.png)
 
 Step 7: To log out, you can either use "ctrl + d" or run the command "exit".
 
