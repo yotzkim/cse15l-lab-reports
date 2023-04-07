@@ -14,7 +14,7 @@ Step 2: Click the button with your cs15l username, then click the link to change
 
 ![Image](PasswordChange.png)
 
-Step 3: Now that we have our account, we can remotely connect! If you are on Windows, you must first download Git first. Open VSCode and open the terminal (ctrl or command + ~ or by using Terminal -> New Terminal). Your terminal should look like something below:
+Step 3: Now that we have our account, we can remotely connect! If you are on Windows, you must first download Git. Open VSCode and open the terminal (ctrl or command + ~ or by using Terminal -> New Terminal). Your terminal should look like something below:
 
 ![Image](Terminal.png)
 
