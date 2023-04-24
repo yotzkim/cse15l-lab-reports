@@ -69,3 +69,56 @@ In this screenshot, I "accidentally" put "d=hello" instead of "s=hello" in the u
 
 
 ## Part 2 - Bug
+
+
+**Failure Inducing Input**
+``
+  @Test
+  public void testReverseInPlaceNoWork(){
+    int[] i = {50, 51, 52};
+    ArrayExamples.reverseInPlace(i);
+    assertArrayEquals(new int[]{52, 51, 50}, i);
+  }
+``
+
+**Input that doesn't induce Failure**
+``
+@Test 
+public void testReverseInPlace() {
+    int[] input1 = { 3 };
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[]{ 3 }, input1);
+	}
+``
+
+**Symptom**
+
+**Before**
+``
+  static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+    }
+  }
+``
+
+
+**After**
+``
+  static void reverseInPlace(int[] arr) {
+    int[] copy = new int[arr.length];
+    for (int i=0; i<arr.length; i++){
+      copy[i] = arr[i];
+    }
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = copy[arr.length - i - 1];
+    }
+  }
+``
+
+The symptom was that the first half of the array would be reversed, but the second would not. This is because the original code would update the first half to be reversed, then try to update the second half by using these updated values of the first half. To fix this issue, my code creates a copy of the array. Each element of the array would just be updated with their respective reversed element in the copy array. This way, we can just update our original array with the elements of the copy array without having to worry about the copy array being changed or the original array being updated wrong.
+
+
+## Part 3 - Reflection
+
+Something I learned in Week 2 was how to run servers and how to read/interpret urls intricately. Before, I never paid too much attention to urls, so it was interesting to learn about the different components and what each of them dictate as well as how we can access/use urls in our code. Additionally, running servers and updating them was super interesting as well; in most of my coding classes, there aren't too many ways to see my code work in a way that goes beyond VSCode/Eclipse, so I was intrigued to learn about running servers.
