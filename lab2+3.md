@@ -72,39 +72,39 @@ In this screenshot, I "accidentally" put "d=hello" instead of "s=hello" in the u
 
 
 **Failure Inducing Input**
-``
+```
   @Test
   public void testReverseInPlaceNoWork(){
     int[] i = {50, 51, 52};
     ArrayExamples.reverseInPlace(i);
     assertArrayEquals(new int[]{52, 51, 50}, i);
   }
-``
+```
 
 **Input that doesn't induce Failure**
-``
+```
 @Test 
 public void testReverseInPlace() {
     int[] input1 = { 3 };
     ArrayExamples.reverseInPlace(input1);
     assertArrayEquals(new int[]{ 3 }, input1);
 	}
-``
+```
 
 **Symptom**
 
 **Before**
-``
+```
   static void reverseInPlace(int[] arr) {
     for(int i = 0; i < arr.length; i += 1) {
       arr[i] = arr[arr.length - i - 1];
     }
   }
-``
+```
 
 
 **After**
-``
+```
   static void reverseInPlace(int[] arr) {
     int[] copy = new int[arr.length];
     for (int i=0; i<arr.length; i++){
@@ -114,7 +114,7 @@ public void testReverseInPlace() {
       arr[i] = copy[arr.length - i - 1];
     }
   }
-``
+```
 
 The symptom was that the first half of the array would be reversed, but the second would not. This is because the original code would update the first half to be reversed, then try to update the second half by using these updated values of the first half. To fix this issue, my code creates a copy of the array. Each element of the array would just be updated with their respective reversed element in the copy array. This way, we can just update our original array with the elements of the copy array without having to worry about the copy array being changed or the original array being updated wrong.
 
