@@ -92,6 +92,7 @@ public void testReverseInPlace() {
 ```
 
 **Symptom**
+![Image](Symptoms.png)
 
 **Before**
 ```
