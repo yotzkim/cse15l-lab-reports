@@ -53,19 +53,19 @@ class Handler implements URLHandler {
 
 **Screenshot 1: Normal Functionality**
 ![Image](H.png)
-There are many methods called, I am going to walk through them, mentioning what arguments/fields are involved. First, there are two field values, lst and count. The "handleRequest" method is called with the url
-as the argument. In this method, we are basically kind of breaking apart the URL and seeing what is going to be added to the server. Inside handleRequest, the url.getPath() method is called with no argument. 
-This method gets the decoded path of the url (what we see in the url line). Then, ".contains" is called on this path with an argument of "/add-message". This method checks if the url has "/add-message" in it, which it does for this screenshot.
-After that, the "getQuery()" method and the ".split()" method is called onto the url. The getQuery method has no argument and is called on the url to retrieve the query component of the url. Then, the .split method is called with "=" as an argument to split the "s" from the actual message, creating an array.
-Then, we check if the first element of this array is "s", which it is, and check if the count is 0. In this screenshot, "Hello" is the very first message, so the count is 0. (I did this so that the very first line does not start with a blank line ("\n") before printing the first message.) The field value lst gets updated to add the string "Hello" and count gets incremented by 1.
+There are many methods called, I am going to walk through them, mentioning what arguments/fields are involved. First, there are two field values, `lst` and `count`. The `handleRequest` method is called with `url`
+as the argument. In this method, we are basically kind of breaking apart `url` and seeing what is going to be added to the server. Inside `handleRequest`, the `url.getPath()` method is called with no argument. 
+This method gets the decoded path of `url` (what we see in the url line). Then, `.contains` is called on this path with an argument of `/add-message`. This method checks if the url has `/add-message` in it, which it does for this screenshot.
+After that, the `getQuery()` method and the `.split()` method is called onto `url`. The `getQuery` method has no argument and is called on `url` to retrieve the query component of the `url`. Then, the `.split` method is called with `=` as an argument to split the `s` from the actual message, creating an array.
+Then, we check if the first element of this array is `s`, which it is, and check if `count` is 0. In this screenshot, "Hello" is the very first message, so `count` is 0. (I did this so that the very first line does not start with a blank line (`\n`) before printing the first message.) The field value `lst` gets updated to add the string `"Hello"` and `count` gets incremented by 1.
   
-If we were to want to add a string "How are you", everything above will run, EXCEPT since count is 1 now, count does not get incremented and lst gets added by the new message on a new line. See below screenshot
+If we were to want to add a string `"How are you"`, everything above will run, EXCEPT since `count` is 1 now, `count` does not get incremented and `lst` gets added by the new message on a new line. See below screenshot
 ![Image](HHAY.png)
 
 
 **Screenshot 2: Mistake!**
 ![Image](404Notfound.png)
-In this screenshot, I "accidentally" put "d=hello" instead of "s=hello" in the url. The handleRequest method still runs with the url as the argument and the.getPath(), .contains(), .getQuery(), and .split() methods run similar to what was described in the Screenshot 1 description. However, because we inputted "d" and not "s", the if statement will not run and instead, we will return a "404 Not Found" message. Neither the lst nor the count field values get updated.
+In this screenshot, I "accidentally" put `d=hello` instead of `s=hello` in the url. The handleRequest method still runs with the url as the argument and `the.getPath()`, `.contains()`, `.getQuery()`, and `.split()` methods run similar to what was described in the Screenshot 1 description. However, because we inputted `d` and not `s`, the if statement will not run and instead, we will return a `"404 Not Found"` message. Neither the `lst` nor the `count` field values get updated.
 
 
 ## Part 2 - Bug
