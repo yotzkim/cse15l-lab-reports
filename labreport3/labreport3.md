@@ -35,7 +35,7 @@ Command:
 
 
 Output:
-
+![Image](-X1.png)
 
 In the above code, I ran `less` with  `-X` on the `911/report/chapter-12.txt` file. As usual, it printed out the contents of the file, one page at a time like the usual function of just `less`. But with the `-X`, it actually leaves the file contents on the screen even when you exist `less`. Below the second example, I wrote about why the command is useful.
 
@@ -46,7 +46,7 @@ Command:
 
 
 Output:
-
+![Image](-X2.png)
     
 In this second example, `less` with  `-X` was used on the `biomed/rr74.txt` file, printing out the first page of the file contents and leaving the file contents on the screen after exiting `less`.When using `less`, the file contents are usually cleared from the screen. However, the `-X` option allows the contents to leave the contents on screen. In the example above, it prints out the contents of the `biomed/rr74.txt` file and leaves it there. This is useful as the file may have important information that you want to refer to or view easily later. It can also help you keep track of which file you were viewing at which time since the file contents will remain even after you exist `less`.
 
