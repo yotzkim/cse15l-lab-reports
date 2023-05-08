@@ -164,4 +164,4 @@ Source: https://phoenixnap.com/kb/less-command-in-linux
 
 
 **Command 4, Example 2**
-`
+`less -m biomed/cc2167.txt`
