@@ -17,7 +17,7 @@ This allows me to log into ieng6.
 
   Keys pressed: Went to the Github repository and copied the link to the fork of the repository using mouse clicks. All the characters used to type the command `git clone`, `command+v` to paste the link, `<enter>`. 
   
-  I wanted to clone the repository and copy paste the repository link easily so I used command+v.
+  I wanted to clone the repository and copy paste the repository link easily so I used `command+v`.
   
  ---
   
