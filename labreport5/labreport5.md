@@ -19,7 +19,7 @@ Thanks for the detailed question! Remember that when you created and copied the 
 
 
 Thank you so much! I see it now! My bug was that in line 21 when I compile the files, I did not specify the correct path to first look into `grading-area` to access the files.
-![Image](actualFixed)
+![Image](actualFixed.png)
 
 ---
 
