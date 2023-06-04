@@ -8,7 +8,7 @@ I expected the file to compile correctly and give me the "Compile Success" messa
 
 
 **Detail the failure-inducing input and context. That might mean any or all of the command you're running, a test case, command-line arguments, working directory, even the last few commands you ran. Do your best to provide as much context as you can.**
-It gives me that the error that `ListExamples.java` could not be found. That's weird because I know we just created and copied it and since `ListExamples.java` was the second argument to compile, it means that the first argument, `TestListExamples`, was fine. Why is that the case? My code is shown below:
+It gives me the error that `ListExamples.java` could not be found. That's weird because I know we just created and copied it and since `ListExamples.java` was the second argument to compile, it means that the first argument, `TestListExamples`, was fine. Why is that the case? My code is shown below:
 ![Image](bugcode.png)
 
 ---
